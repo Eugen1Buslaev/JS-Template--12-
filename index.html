@@ -1,0 +1,124 @@
+
+
+
+<!-- <div class="wrapper">
+
+<h1> Иванов Иван Иваныч</h1>
+
+<img src="circle.png">
+
+<p>Студент заборостроительного университета</p>
+
+<h2> Хочу учить фронтенд, потому что: </h2>
+
+<ul>
+	<li>Заборы строить не интерестно</li>
+	<li>Платят мало</li>
+	<li>Приходится работать по ночам</li>
+</ul>
+
+
+<h2> Мой контактный номер телефона </h2>
+
+<p> +380939405... </p>
+
+<h2> Мой профиль в контакте </h2>
+
+<a href="vk.com"> VK.COM </a>
+
+<h2>Мой фитбэк</h2>
+
+<p>Если нужно, могу построить вам забор</p>
+
+
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sablonizator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="template.js"></script>
+	<script>
+		$(function(){
+			var template = $('#test').html();
+			var data = {
+				title:  prompt('Вевдите свое имя'),
+				image: ' ',
+				paragraf:  prompt('Студентом какого университета вы являетесь'),
+				Title2:  'Хочу учить фронтенд, потому что:',
+				paragrafLI: prompt(),
+				paragrafLi2: prompt(),
+				paragrafLi3: prompt(),
+				contacts: 'Мой мобильній номер телефона',
+				contacts2: prompt('Введите номер мобильного'),
+				profile: 'Мой профиль в контакте',
+				link:  'VK.COM',
+				feetback: prompt('Что ві еще можете делать')
+
+
+
+
+				
+			};
+             var content  = tmpl(template, data);
+			
+			$('.wrapper').append(content);
+		})
+
+
+  
+	</script>
+	
+
+</head>
+<body>
+
+<div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script  type="text/template" id="test">
+	<h1><%= title %></h1>
+	<img src="circle.png" <%= image %>>
+	<p><%= paragraf %></p>
+	<h2> <%= Title2 %></h2>
+	<ul>
+	<li><%= paragrafLI %></li>
+	<li><%= paragrafLi2 %></li>
+	<li><%= paragrafLi3 %></li>
+    </ul>
+	<h2> <%= contacts %></h2>
+	<p> <%= contacts2 %></p>
+	<h2> <%= profile %></h2>
+	<a href=""><%= link %></a>
+	<h3> <%= feetback %></h3>
+
+
+
+</script>	
+</body>
+</html>
